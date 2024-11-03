@@ -2,7 +2,7 @@ module Values
   class Quantity
     include ActiveModel::Model
 
-    attr_accessor :number
+    attr_reader :number
 
     validates :number, presence: true
     validates :number, numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 99 }
